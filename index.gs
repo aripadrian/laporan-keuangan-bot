@@ -1,6 +1,6 @@
 //CONFIG
 var BOT_TOKEN = "1234567890:abcdefghijklmnopqrstuvwxyz" //BOT TOKEN ANDA
-var SS_URL = "https://docs.google.com/spreadsheets/d/abcdefghijklmnopq/edit#gid=0" //URL SPREADSHEET
+var SS_ID = "abcdefghijklmnopq" // EX URL" https://docs.google.com/spreadsheets/d/abcdefghijklmnopq/edit#gid=0 , its mean id = abcdefghijklmnopq
 var SHEET_NAME = "laporan" //NAMA SHEET
 var USERS = [
 	173739838,
@@ -9,7 +9,7 @@ var USERS = [
 
 
 //BEGIN
-var SHEET = SpreadsheetApp.openByUrl(SS_URL).getSheetByName(SHEET_NAME);
+var SHEET = SpreadsheetApp.openById(SS_ID);
 
 function doGet(e) {
 	return HtmlService.createHtmlOutput('<h1>OK</h1>')
